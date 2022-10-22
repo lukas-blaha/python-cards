@@ -33,3 +33,10 @@ class Deck:
 
     def shuffle(self):
         np.random.shuffle(self.cards)
+
+    def give(self, n):
+        g = []
+        for i in range(n):
+            g.append(self.cards[0])
+            self.cards.pop(0)
+        return g
